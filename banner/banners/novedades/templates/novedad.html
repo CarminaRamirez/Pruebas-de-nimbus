@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load ratings %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-sm text-center">
+        <strong>{{ novedad.titulo }}</strong>
+        <br>
+        {{ novedad.descripcion }}
+        <br>
+        <img class="d-block w-100" src="{{ novedad.imagen.url }}" alt="Imagen">
+        <br>
+        {{ novedad.contenido }}
+        <br>
+        {% block star %}
+        {% endblock %}
+        <br>
+        {% if novedad.youtube_video_id %}
+        <iframe width="944" height="500" src="http://www.youtube.com/embed/{{ novedad.youtube_video_id }}" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+            gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock content %}

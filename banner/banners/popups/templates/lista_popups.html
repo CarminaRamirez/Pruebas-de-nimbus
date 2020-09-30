@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+    .btncerrar{
+         color: #FFFFFF;
+         background-color: #FF0000;
+         background-size: cover;
+         background-position: center;
+         display: inline-block;
+         border: none;
+<!--         padding: 10px;-->
+         padding-bottom:15px;
+         width: 100px;
+         border-radius: 500px;
+         height: 30px;
+         transition: all 0.5s;
+         cursor: pointer;
+    }
+    .btncerrar:hover
+    {
+         width: 150px;
+         height: 35px;
+    }
+</style>
+
+
+<div class="text-center">
+    <br>
+    <h5>Pop Ups cargados</h5>
+    <a href="/popups/agregar/">Agregar nuevo</a>
+</div>
+
+<br>
+<div class="container; text-center">
+    {% for popup in popups %}
+    <div class="row">
+        <div class="col-sm">
+            <img class="d-block w-100" src="{{ popup.imagen.url }}" alt="Imagen">
+            <br>
+        </div>
+        <div class="col-sm">
+            {{ popup.titulo }}
+        </div>
+        <div class="col-sm">
+            <a href="/popups/{{ popup.pk }}/">Editar</a>
+            <br>
+            <button class="btn btn-danger eliminar" data-pk="{{ popup.pk }}">Eliminar</button>
+        </div>
+        <br>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}
+
+{% block scripts_pie %}
+<script type="text/javascript">
+(function($) {
+    'use strict';
+    $('.eliminar').on('click', function() {
+        var pk = $(this).data('pk');
+        $.ajax({
+            method: "POST",
+            url: "{% url 'popups:eliminar' %}",
+            data: { pk: pk, csrfmiddlewaretoken: '{{ csrf_token }}' }
+        })
+        .done(function( datos ) {
+            console.log(datos);
+            //datos.mensaje;
+            //datos.url;
+            alert(datos.mensaje);
+            location.reload();
+        })
+        .fail(function( jqXHR, textStatus ) {
+            alert('Oops!!', 'Encontramos un problema: ' + jqXHR + ' estado: ' + textStatus, 'danger');
+        });
+    });
+})(jQuery);
+</script>
+{% endblock %}

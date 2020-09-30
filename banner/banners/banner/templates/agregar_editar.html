@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<br>
+<h1>Banner</h1>
+</span>
+<br>
+
+<div>
+  <form action="{{ request.path }}" method="POST" enctype="multipart/form-data">{% csrf_token %}
+    <table>
+      {{ form.as_table }}
+    </table>
+    <button type="submit">Agregar banner</button>
+    {% if elemento is not None %}
+      <a href="delete/" onClick="return confirm('¿Seguro que quieres borrar el banner {{ elemento.titulo }}?');">Eliminar banner</a>
+    {% endif %}
+  </form>
+</div>
+
+{% endblock content %}

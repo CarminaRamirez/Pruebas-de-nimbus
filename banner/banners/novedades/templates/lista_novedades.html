@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block scripts_encabezado %}
+
+<style>
+    .btncerrar{
+         color: #FFFFFF;
+         background-color: #FF0000;
+         background-size: cover;
+         background-position: center;
+         display: inline-block;
+         border: none;
+<!--         padding: 10px;-->
+         padding-bottom:15px;
+         width: 100px;
+         border-radius: 500px;
+         height: 30px;
+         transition: all 0.5s;
+         cursor: pointer;
+    }
+    .btncerrar:hover
+    {
+         width: 150px;
+         height: 35px;
+    }
+</style>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="text-center">
+    <br>
+    <h5>NOVEDADES</h5>
+    {% if request.user.is_authenticated %}
+        <a href="/novedades/agregar/">Agregar nueva novedad</a>
+    {% endif %}
+</div>
+
+<br>
+<div class="container; text-center">
+    {% for novedad in novedades %}
+        <div class="row">
+            <div class="col-sm">
+                <img class="d-block w-100" src="{{ novedad.imagen.url }}" alt="Imagen">
+                <br>
+            </div>
+            <div class="col-sm">
+                <strong>{{ novedad.titulo }}</strong>
+                <br>
+                {{ novedad.descripcion }}
+            </div>
+            <div class="col-sm">
+            {% if request.user.is_authenticated %}
+                <br>
+                <button class="btn btn-danger eliminar" data-pk="{{ novedad.pk }}">Eliminar</button>
+                <br>
+                <br>
+                <br>
+                <a href="/novedades/{{ novedad.pk }}/">Editar</a>
+                <br>
+
+                
+            {% endif %}
+            <br>
+
+                <a href="/novedades/{{ novedad.pk }}/ver/">VER</a>
+                <br>
+            </div>
+
+
+            <br>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}
+
+{% block scripts_pie %}
+<script type="text/javascript">
+(function($) {
+    'use strict';
+    $('.eliminar').on('click', function() {
+        var pk = $(this).data('pk');
+        $.ajax({
+            method: "POST",
+            url: "{% url 'novedades:eliminar' %}",
+            data: { pk: pk, csrfmiddlewaretoken: '{{ csrf_token }}' }
+        })
+        .done(function( datos ) {
+            console.log(datos);
+            //datos.mensaje;
+            //datos.url;
+            alert(datos.mensaje);
+            location.reload();
+        })
+        .fail(function( jqXHR, textStatus ) {
+            alert('Oops!!', 'Encontramos un problema: ' + jqXHR + ' estado: ' + textStatus, 'danger');
+        });
+    });
+})(jQuery);
+</script>
+{% endblock %}

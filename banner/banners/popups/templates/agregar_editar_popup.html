@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<br>
+<h1>Pop Up</h1>
+</span>
+<br>
+
+<div>
+  <form action="{{ request.path }}" method="POST" enctype="multipart/form-data">{% csrf_token %}
+    <table>
+      {{ form.as_table }}
+    </table>
+    <button type="submit">Agregar Pop up</button>
+    {% if elemento is not None %}
+      <a href="delete/" onClick="return confirm('¿Seguro que quieres borrar el pop up {{ elemento.titulo }}?');">Eliminar Pop Up</a>
+    {% endif %}
+  </form>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,83 @@
+{% load static %}
+{% load ratings%}
+{# {% load media %} #} 
+{# plantilla para usar con archivos de la carpeta static #}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+    {# cargar estrellitas #}
+    <link rel="stylesheet" href="{% static 'css/star-ratings.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/starability-all.min.css' %}"/>
+{% block scripts_encabezado %}{% endblock %}
+  </head>
+  <body>
+
+    <br>
+    {% if request.user.is_authenticated %}
+    <div class="row">
+        <a class="nav-link active" href="#">Hola {{ request.user.username|upper }}!</a>
+        <a class="nav-link active" href="/perfil">TU PERFIL</a>
+    </div>
+    {% endif %}
+    <br>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color:  #97075b">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/novedades/">NOVEDADES</a>
+            </li>
+            {% if request.user.is_authenticated %}
+              <li class="nav-item">
+                  <a class="nav-link" href="/banner/">CONFIGURAR BANNERS</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/popups/">CONFIGURAR POPUPS</a>
+              </li>
+            {% endif %}
+          </ul>
+          {% include "barra.html" %}
+          <!-- <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-outline-light">Iniciar sesión</button>
+            <button type="button" class="btn btn-outline-light">Registrarse</button>
+          </div> -->
+        </div>
+    </nav>
+
+
+    {% block content %}{% endblock content %}
+
+
+    <br>
+    <div class="text-center">
+      <strong class="blue-text">CARMINA'S PRODUCCIONES</strong>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    {# <script src="{% static 'js/eliminar.js' %}"></script> #}
+    {# cargar estrellitas #}
+    <script type="text/javascript" src="{% static 'js/star-ratings.min.js' %}"></script>
+    {# convertir imagenes #}
+    <script src="{% static 'js/convertir_imagen.js' %}"></script>
+
+  {% block scripts_pie %}{% endblock %}
+
+  </body>
+</html>

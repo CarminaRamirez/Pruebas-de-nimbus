@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+<script>
+  .centrar-form{
+ margin: 50px auto;
+ float:none;
+}
+</script>
+
+{% block content %}
+<div  class="centrar-form">
+  <br>
+  <h1>Novedad</h1>
+  </span>
+  <br>
+
+  <div>
+    <form action="{{ request.path }}" method="POST" enctype="multipart/form-data">{% csrf_token %}
+      <table>
+        {{ form.as_table }}
+      </table>
+      <button type="submit">Agregar novedad</button>
+      {% if elemento is not None %}
+        <a href="delete/" onClick="return confirm('¿Seguro que quieres borrar el banner {{ elemento.titulo }}?');">Eliminar novedad</a>
+      {% endif %}
+    </form>
+  </div>
+</div>
+
+{% endblock content %}

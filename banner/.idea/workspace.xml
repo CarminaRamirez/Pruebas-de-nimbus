@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="abdfaeeb-2f20-4b4d-a696-3f009537c690" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1grrn2WJKRgBoHZ83ax0xjeOshb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nimbus" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\usuario\banner\banners\pagina\templates\registration" />
+      <recent name="C:\Users\usuario\banner\banners\novedades\templates" />
+      <recent name="C:\Users\usuario\banner\banners\static" />
+      <recent name="C:\Users\usuario\banner\banners\banner\templates" />
+      <recent name="C:\Users\usuario\banner\banners\popups\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\usuario\banner\banners\banners" />
+      <recent name="C:\Users\usuario\banner\banners" />
+      <recent name="C:\Users\usuario\banner\banners\banner" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="abdfaeeb-2f20-4b4d-a696-3f009537c690" name="Default Changelist" comment="" />
+      <created>1598883715204</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598883715204</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="444" y="167" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599490527477">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="444" y="167" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1599490527477" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599228258782">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1599228258782" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1599737614332">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1599737614332" />
+    <state width="1345" height="223" key="GridCell.Tab.0.bottom" timestamp="1598975427308">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598975427308" />
+    <state width="1345" height="223" key="GridCell.Tab.0.center" timestamp="1598975427307">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1598975427307" />
+    <state width="1345" height="223" key="GridCell.Tab.0.left" timestamp="1598975427302">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1598975427302" />
+    <state width="1345" height="223" key="GridCell.Tab.0.right" timestamp="1598975427307">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1598975427307" />
+    <state width="1345" height="223" key="GridCell.Tab.1.bottom" timestamp="1598975427309">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598975427309" />
+    <state width="1345" height="223" key="GridCell.Tab.1.center" timestamp="1598975427308">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1598975427308" />
+    <state width="1345" height="223" key="GridCell.Tab.1.left" timestamp="1598975427308">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1598975427308" />
+    <state width="1345" height="223" key="GridCell.Tab.1.right" timestamp="1598975427309">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1598975427309" />
+    <state x="184" y="6" key="SettingsEditor" timestamp="1599098551531">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1599098551531" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1599594405120">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1599594405120" />
+    <state x="379" y="96" width="607" height="536" key="find.popup" timestamp="1599053410503">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="96" width="607" height="536" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1599053410503" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1598969554986">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1598969554986" />
+  </component>
+</project>
